@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Buttons */
+  .button {
+    @apply flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed duration-200;
+  }
+  .button__primary {
+    @apply bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-indigo-600;
+  }
+  .button__success {
+    @apply block border border- bg-green-50/90 px-[1rem] py-[.4rem] text-green-500 shadow-lg shadow-neutral-100 duration-200 hover:bg-green-100/90 hover:shadow-green-600/10 disabled:cursor-not-allowed disabled:text-green-500/50 dark:bg-green-600/10 dark:shadow-neutral-950 dark:hover:shadow-green-600/5 dark:disabled:border-green-500/20 dark:disabled:bg-green-800/5;
+  }
+
+  /* Alert base */
+  .alert {
+    @apply grid grid-cols-[24px_1fr] gap-1 shadow-lg px-2 py-1.5 border items-center rounded;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 214 100% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    /* --primary: 0 0% 9%; */
+    --primary-foreground: 0 0% 98%;
+
+    /* --secondary: 0 0% 96.1%; */
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --secondary: 0 29 65;
+    --primary: 24 86 163;
+    --tertiary: 0 13 30;
+  }
+
+  .dark {
+    --background: 214 100% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* --primary: 0 0% 98%; */
+    --primary-foreground: 0 0% 9%;
+
+    /* --secondary: 0 0% 14.9%; */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+/* html {
+  overflow: scroll;
+  scrollbar-color: pink white;
+  scrollbar-width: thin;
+} */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
